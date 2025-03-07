@@ -12,14 +12,173 @@ header {
     padding: 1em;
 }
 
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: #f1f1f1;
+}
+
 nav a {
-    margin: 0 15px;
-    text-decoration: none;
+    margin: 0 10px;
     color: #333;
+    text-decoration: none;
+    padding: 5px 10px;
+    transition: background-color 0.3s;
+}
+
+nav a:hover {
+    background-color: #ddd;
 }
 
 section {
     padding: 20px;
-    margin: 10px;
+    margin: 20px 0;
     background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#products .product-images {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+#products .product-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 300px;
+    margin: 10px;
+}
+
+#products .product-item img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+#products .product-item p {
+    max-width: 300px;
+    margin: 5px 0;
+    text-align: justify;
+    line-height: 1.6;
+}
+
+#contact img {
+    width: 150px;
+    height: auto;
+    margin: 10px auto;
+    display: block;
+    /* position: fixed; */
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+    #products .product-item {
+        max-width: 250px;
+    }
+    #products .product-item img {
+        max-width: 100%;
+    }
+    #products .product-item p {
+        max-width: 250px;
+    }
+    #contact img {
+        width: 100px;
+    }
+}
+
+@media (max-width: 600px) {
+    #contact img {
+        position: relative;
+        margin: 20px auto;
+    }
+}
+#community {
+    padding: 20px;
+    margin: 20px 0;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#community .social-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+#community .social-links a {
+    text-decoration: none;
+}
+
+#community .social-links img {
+    width: 32px;
+    height: 32px;
+}
+
+#community .comments-section {
+    margin-top: 20px;
+}
+
+#community .comments-section h3 {
+    margin-bottom: 10px;
+}
+
+#community .comment {
+    background-color: #f9f9f9;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+#community .comment h4 {
+    margin: 0 0 5px;
+    font-size: 16px;
+}
+
+#community .comment p {
+    margin: 0;
+}
+
+#community .add-comment {
+    margin-top: 20px;
+}
+
+#community .add-comment label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+#community .add-comment input[type="text"],
+#community .add-comment textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#community .add-comment button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#community .add-comment button:hover {
+    background-color: #45a049;
 }
