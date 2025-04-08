@@ -4,15 +4,122 @@
     <meta charset="UTF-8">
     <title>黔灵天麻 - 文化传承与产业创新</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="static/images/吉祥物-1.png" type="image/png"> <!-- 添加 favicon -->
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f5f0e1;
+            color: #333;
+        }
+        header {
+            background-color: #8b4513;
+            color: #fff;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+        nav {
+            background-color: #d2b48c;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            padding: 1rem 0;
+        }
+        nav a {
+            color: #333;
+            transition: color 0.3s ease;
+        }
+        nav a:hover {
+            color: #8b4513;
+        }
+        section {
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            margin: 2rem auto;
+            padding: 2rem;
+            width: 90%;
+            max-width: 1200px;
+        }
+        h2 {
+            color: #8b4513;
+            font-size: 2rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+        h3 {
+            color: #8b4513;
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-top: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+        h4 {
+            color: #8b4513;
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-top: 1rem;
+            margin-bottom: 0.25rem;
+        }
+        .product-item img {
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+        .product-item img:hover {
+            transform: scale(1.05);
+        }
+        .mascot-icon {
+            height: 5em;
+            margin-right: 10px;
+        }
+        .social-links a img {
+            width: 32px;
+            height: 32px;
+            transition: transform 0.3s ease;
+        }
+        .social-links a img:hover {
+            transform: scale(1.1);
+        }
+        .add-comment form {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        .add-comment form input,
+        .add-comment form textarea {
+            padding: 0.75rem;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .add-comment form button {
+            background-color: #8b4513;
+            color: #fff;
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .add-comment form button:hover {
+            background-color: #65320c;
+        }
+    </style>
 </head>
 <body>
     <header>
+        <img src="static/images/吉祥物.jpg" alt="吉祥物图标" class="mascot-icon"> <!-- 添加吉祥物图标 -->
         <h1>黔天臻宝阁</h1>
     </header>
     <nav>
         <a href="#about">关于我们</a>
         <a href="#tradition">天麻故事</a>
         <a href="#products">产品展示</a>
+        <a href="#cultural-products">天麻文创产品</a>
         <a href="#community">交流社区</a>
         <a href="#contact">联系我们</a>
     </nav>
@@ -20,37 +127,38 @@
         <h2>关于我们</h2>
         <p>黔天臻宝阁是一个专注于天麻文化的宣传推广与天麻产品售卖的综合性平台。
             这里汇聚了来自贵州不同地区的天麻文化精髓，每一份天麻都承载着这片土地的独特韵味与深厚底蕴。通过关注黔天臻宝阁，您可以深入了解天麻的悠久历史、神奇功效以及多样化的制品形式。我们致力于为您提供最优质的天麻产品，让您在品味天麻的同时，也能感受到浓厚的天麻文化氛围。</p>
+        <h3>我们的使命</h3>
+        <p>我们的使命是传承和弘扬贵州天麻文化，让更多的人了解和受益于天麻的神奇功效。通过与当地农民合作，我们确保每一件产品都源自天然、纯正的贵州天麻，同时支持当地经济发展，促进可持续农业。</p>
+        <h3>我们的团队</h3>
+        <p>我们的团队由一群热爱天麻文化和传统中医药的专业人士组成。他们在天麻种植、加工、研发和市场营销方面拥有丰富的经验，致力于为您提供最优质的产品和服务。</p>
     </section>
     <section id="tradition">
         <img src="static/images/guizhou-mountain.jpg" alt="贵州天麻种植">
         <h2>讲天麻故事，享健康人生</h2>
         <h3>传统医学地位</h3>
         <h4>典籍溯源</h4> 
-        <p>自《神农本草经》列为上品，与鹿茸、冬虫夏草齐名，被李时珍誉为"补益上药第一"
-        </p>
+        <p>自《神农本草经》列为上品，与鹿茸、冬虫夏草齐名，被李时珍誉为"补益上药第一"。在古代，天麻就被视为珍贵的中药材，用于治疗各种疾病。</p>
         <h4>核心功效</h4> 
-        <p>平肝息风：治疗头痛眩晕、癫痫抽搐，经典方剂"天麻钩藤饮"可调节肝阳上亢型高血压</p>
-        <p>祛风通络：改善风湿痹痛、中风后遗症,对帕金森病有效率超80%</p>
-        <p>健脑益智：含天麻素保护神经细胞，增强记忆力，古代用于缓解考生疲劳</p>
+        <p>平肝息风：治疗头痛眩晕、癫痫抽搐，经典方剂"天麻钩藤饮"可调节肝阳上亢型高血压。现代医学研究表明，天麻中的有效成分能够调节神经系统，缓解头痛和眩晕症状。</p>
+        <p>祛风通络：改善风湿痹痛、中风后遗症,对帕金森病有效率超80%。天麻中的活性成分具有抗炎和镇痛作用，能够减轻关节疼痛和肌肉僵硬。</p>
+        <p>健脑益智：含天麻素保护神经细胞，增强记忆力，古代用于缓解考生疲劳。现代研究发现，天麻素能够促进神经细胞的生长和修复，提高大脑的认知功能。</p>
         <h3>饮食文化中的核心地位</h3>
-        <p>天麻因独特地理环境（年均温12℃、湿度85%）品质最佳，形成独特饮食传统</p>
+        <p>天麻因独特地理环境（年均温12℃、湿度85%）品质最佳，形成独特饮食传统。贵州的气候和土壤条件为天麻的生长提供了得天独厚的环境，使得贵州天麻具有更高的品质和药效。</p>
         <h4>历史渊源</h4> 
-        <p>三国时期诸葛亮南征时曾用天麻治愈士兵头晕症，载入《镇雄州志》</p>
-        <p>明代起，贵州大方天麻成为贡品，拥有600余年进贡历史，以“滋补之王”闻名。光绪皇帝曾用天麻洗头治疗头痛，载入《清宫医案》</p>
+        <p>三国时期诸葛亮南征时曾用天麻治愈士兵头晕症，载入《镇雄州志》。从此，天麻在贵州地区的应用更加广泛，成为当地人民常用的中药材。</p>
+        <p>明代起，贵州大方天麻成为贡品，拥有600余年进贡历史，以“滋补之王”闻名。光绪皇帝曾用天麻洗头治疗头痛，载入《清宫医案》。这充分证明了天麻在古代宫廷中的重要地位。</p>
         <h4>经典药膳</h4> 
-        <p>天麻炖鸡（补气血）：鸡肉蛋白质与天麻药效结合，改善肝风内动型头晕</p>
-        <p>天麻鱼头汤（改善脑供血）：鱼头鲜味与天麻协同作用，缓解脑疲劳</p>
+        <p>天麻炖鸡（补气血）：鸡肉蛋白质与天麻药效结合，改善肝风内动型头晕。这道药膳不仅味道鲜美，而且具有很好的滋补作用，适合体质虚弱的人群食用。</p>
+        <p>天麻鱼头汤（改善脑供血）：鱼头鲜味与天麻协同作用，缓解脑疲劳。鱼头中含有丰富的不饱和脂肪酸，与天麻搭配食用，能够促进大脑血液循环，提高大脑的供氧量。</p>
         <h4>节庆符号</h4> 
-        <p>春节"天麻火腿鸡"：驱寒暖身，含天麻素提升免疫力</p>
-        <p>中秋"天麻核桃鱼"：增强脑力，含天麻多糖延缓衰老</p>
+        <p>春节"天麻火腿鸡"：驱寒暖身，含天麻素提升免疫力。在春节期间，一家人围坐在一起，品尝这道美味的药膳，不仅能够驱寒暖身，还能增强免疫力，预防疾病。</p>
+        <p>中秋"天麻核桃鱼"：增强脑力，含天麻多糖延缓衰老。中秋节是团圆的节日，这道药膳寓意着家庭团圆、幸福美满，同时还能增强脑力，延缓衰老。</p>
+        <h3>民族文化渊源</h3>
+        <p>在贵州的苗药和侗族传统医药中，天麻一直占据着重要地位。苗族同胞利用天麻治疗头晕目眩等病症，侗族则将天麻用于祭祀仪式，祈求健康平安。这些民族文化传统体现了天麻在贵州地区的深厚底蕴。</p>
+        <h3>天麻的生长环境与种植技术</h3>
+        <p>贵州的天麻产区，海拔多在1000 - 1500米之间，年平均气温12 - 15℃，年降水量1000 - 1300毫米，这样的环境为天麻生长提供了理想条件。</p>
+        <p>种植天麻时，首先要选择优质的蜜环菌和天麻种，采用有性繁殖和无性繁殖相结合的方式进行播种。在田间管理方面，要注意保持土壤湿度和透气性，避免阳光直射。</p>
     </section>
-    <!-- <section id="products">
-        <h2>产品展示</h2>
-        <img src="static\images\tianma-tea.jpg" alt="贵州天麻茶">
-        <p>产品描述</p>
-        <img src="static\images\guizhou-mountain.jpg" alt="贵州天麻种植">
-    <p>产品描述</p>
-    </section> -->
     <section id="products">
         <h2>产品展示</h2>
         <div class="product-images">
@@ -58,24 +166,92 @@
                 <img src="static/images/tianma-tea.jpg" alt="贵州天麻茶">
                 <p>天麻茶</p>
                 <p>天麻茶是以天麻为主要原料的养生饮品，通过切片或研磨后与茶叶（如绿茶）搭配冲泡而成，具有平肝息风、镇静安神、改善头痛头晕等核心功效。
-                    其核心成分天麻素能调节中枢神经，缓解肝阳上亢型高血压引起的眩晕，临床数据显示对偏头痛、神经衰弱有效率超80%。现代快节奏生活中，天麻茶因便捷性（3-5克/日）成为上班族和学生缓解脑疲劳的首选，同时天麻多糖成分可增强免疫力，辅助改善记忆功能。需注意孕妇、气血虚者禁用，且建议搭配枸杞、菊花等辅料以平衡药性</p>
+                    其核心成分天麻素能调节中枢神经，缓解肝阳上亢型高血压引起的眩晕，临床数据显示对偏头痛、神经衰弱有效率超80%。现代快节奏生活中，天麻茶因便捷性（3 - 5克/日）成为上班族和学生缓解脑疲劳的首选，同时天麻多糖成分可增强免疫力，辅助改善记忆功能。需注意孕妇、气血虚者禁用，且建议搭配枸杞、菊花等辅料以平衡药性。</p>
+                <h4>饮用方法</h4>
+                <p>取3 - 5克天麻茶，用开水冲泡，焖泡5 - 10分钟后即可饮用。可根据个人口味加入适量的蜂蜜或冰糖。</p>
             </div>
             <div class="product-item">
                 <img src="static/images/cuipian.jpg" alt="贵州天麻脆片零食">
                 <p>天麻脆片零食</p>
                 <p>天麻脆皮零食是以云南昭通小草坝天麻为核心原料，通过低温冻干技术制成薄片后，佐以黑芝麻、核桃碎等辅料制成的便携休闲食品。其核心功效体现在三方面：一是天麻素调节中枢神经，临床数据显示对偏头痛、神经衰弱有效率超80%；二是天麻多糖增强免疫力，适合体虚易感人群；三是蜂蜜浸渍工艺改善口感，清脆甘甜中保留药效，实现"药食同源"的便捷补充。每100g产品含天麻85%以上，开袋即食或泡水饮用均可，成为现代职场人缓解脑疲劳、学生增强记忆力的健康选择。</p>
+                <h4>食用建议</h4>
+                <p>每日食用量不宜超过50克，可作为零食随时食用，也可在下午茶时间搭配茶水食用。</p>
             </div>
             <div class="product-item">
                 <img src="static/images/hufa.jpg" alt="贵州天麻精华护发素">
                 <p>天麻精华护发素</p>
                 <p>天麻精华护发素是以天麻提取物为核心成分的护发产品，通过天麻素和天麻多糖的协同作用，实现滋养修护、改善毛躁、去屑防脱三重功效。其核心成分天麻素能调节头皮微生态平衡，减少有害菌滋生，缓解头屑瘙痒问题；天麻多糖则深入发丝修复毛鳞片损伤，使头发恢复柔顺亮泽。临床数据显示，连续使用28天可使头发断裂率降低35%，头皮油脂分泌减少20%。该产品特别适合频繁烫染、易断发质人群，建议搭配同系列洗发水使用效果更佳。</p>
+                <h4>使用方法</h4>
+                <p>洗发后，取适量护发素均匀涂抹于头发上，轻轻按摩头皮和发丝，停留3 - 5分钟后用清水冲洗干净。</p>
+            </div>
+            <div class="product-item">
+                <img src="static/images/天麻饮料.jpg" alt="天麻功能性饮料">
+                <p>天麻功能性饮料</p>
+                <p>富含天麻有效成分，为您快速补充能量，缓解疲劳，提升精神状态，适合运动后或工作疲劳时饮用。</p>
+                <h4>饮用提示</h4>
+                <p>每日饮用不超过2瓶，开封后请尽快饮用完毕。</p>
+            </div>
+            <div class="product-item">
+                <img src="static/images/binggan.jpg" alt="天麻饼干">
+                <p>天麻饼干</p>
+                <p>将天麻融入饼干制作，口感酥脆，营养丰富，既能满足您的味蕾，又能起到养生保健的作用。</p>
+                <h4>食用场景</h4>
+                <p>可作为早餐、下午茶或夜宵食用，搭配牛奶或咖啡口感更佳。</p>
+            </div>
+            <div class="product-item">
+                <img src="static/images/天麻精华液.jpg" alt="天麻精华液">
+                <p>天麻精华液</p>
+                <p>采用先进科技提取天麻精华，深入肌肤底层，滋养肌肤，增强肌肤弹性，让您的肌肤焕发光彩。</p>
+                <h4>使用步骤</h4>
+                <p>洁面后，取适量精华液均匀涂抹于面部，轻轻按摩至完全吸收。建议早晚各使用一次。</p>
             </div>
         </div>
     </section>
+    <section id="cultural-products">
+        <h2>天麻文创产品</h2>
+        <div class="product-images">
+            <div class="product-item">
+                <img src="static/images/书签.png" alt="书签"> <!-- 替换为实际图片路径 -->
+                <p>天麻主题书签</p>
+                <p>精美的天麻主题书签，采用传统工艺制作，具有独特的文化韵味。书签上印有天麻的图案和相关的中医药知识，让您在阅读的同时也能了解天麻文化。</p>
+            </div>
+            <div class="product-item">
+                <img src="static/images/帆布袋.png" alt="帆布袋"> <!-- 替换为实际图片路径 -->
+                <p>天麻主题帆布袋</p>
+                <p>时尚实用的天麻主题帆布袋，展现天麻文化，是出行的好伴侣。帆布袋采用环保材料制作，容量大，结实耐用，适合购物、旅行等场合使用。</p>
+            </div>
+            <div class="product-item">
+                <img src="static/images/礼盒.png" alt="礼盒"> <!-- 替换为实际图片路径 -->
+                <p>天麻礼盒</p>
+                <p>用天麻制作的精美礼盒，具有收藏价值和营养价值，是赠送亲友的佳品。礼盒内包含多种天麻产品，如天麻茶、天麻脆片等，是一份健康又贴心的礼物。</p>
+            </div>
+            <div class="product-item">
+                <img src="static/images/T恤.png" alt="天麻文创T恤"> <!-- 替换为实际图片路径 -->
+                <p>天麻文创T恤</p>
+                <p>以天麻为主题设计的时尚T恤，融合传统中医药文化与现代潮流元素，展现独特个性。适合热爱健康生活和文化传承的人群。T恤采用舒适的面料制作，穿着透气舒适，是夏日出行的必备单品。</p>
+            </div>
+            <div class="product-item">
+                <img src="static/images/冰箱贴.png" alt="天麻文创冰箱贴"> <!-- 替换为实际图片路径 -->
+                <p>天麻文创冰箱贴</p>
+                <p>精美的天麻主题冰箱贴，采用环保材料制作，既实用又具有装饰性，是家居生活的理想选择。冰箱贴上印有各种天麻的图案和文字，为您的家居增添一份独特的文化氛围。</p>
+            </div>
+            <div class="product-item">
+                <img src="static/images/水杯2.jpeg" alt="天麻文创水杯"> <!-- 替换为实际图片路径 -->
+                <p>天麻文创水杯</p>
+                <p>独特的天麻图案设计水杯，保温性能优越，适合日常使用或作为礼品赠送，彰显文化品位。水杯采用优质的不锈钢材质制作，保温效果好，可长时间保持水温。</p>
+            </div>
+            <div class="product-item">
+                <img src="static/images/挂件.jpeg" alt="天麻文创挂件"> <!-- 替换为实际图片路径 -->
+                <p>天麻文创挂件</p>
+                <p>精致的天麻主题挂件，可作为车饰或包饰，寓意健康平安，兼具美观与实用性，是馈赠亲友的好选择。挂件采用精细的工艺制作，造型精美，是一份独特的小礼物。</p>
+            </div>
+        </div>
+    </section>
+    
     <section id="community">
         <h2>交流社区</h2>
-        <p>在这里可以添加社交媒体链接或者提供用户交流的平台。</p>
-        <div class="social-links">
+        <p>在这里可以添加社交媒体链接或者提供用户交流的平台。我们还会定期举办线上天麻知识科普活动，深入普及天麻的健康功效与科学使用方法，帮助您建立正确认知。</p>
+        <div class="social-links flex gap-4 my-4">
             <a href="https://www.facebook.com/yourpage" target="_blank">
                 <img src="static/images/douyin.jpg" alt="抖音">
             </a>
@@ -90,15 +266,15 @@
             <h3>用户评论</h3>
             <div class="comment">
                 <h4>用户1</h4>
-                <p>这个产品真的很好，效果显著！</p>
+                <p>这个产品真的很好，效果显著！我喝了天麻茶后，头痛的症状明显减轻了。</p>
             </div>
             <div class="comment">
                 <h4>用户2</h4>
-                <p>非常喜欢这个平台，内容丰富，产品也很棒！</p>
+                <p>非常喜欢这个平台，内容丰富，产品也很棒！我买了天麻脆片零食，口感很好，还很有营养。</p>
             </div>
             <div class="comment">
                 <h4>用户3</h4>
-                <p>天麻茶真的好喝，推荐给大家！</p>
+                <p>天麻茶真的好喝，推荐给大家！我每天都会喝一杯，感觉精神状态都变好了。</p>
             </div>
             <div class="add-comment">
                 <h3>添加评论</h3>
@@ -111,12 +287,22 @@
                 </form>
             </div>
         </div>
+        <div class="events-section">
+            <h3>近期活动</h3>
+        </div>
     </section>
-    <footer id="contact">
+    <section id="contact">
         <h2>联系我们</h2>
-        <p>提供联系方式或社交媒体链接。可扫描二维码查看黔天臻宝阁官方旗舰店。</p>
-        <!-- 添加二维码图片 -->
-        <img src="static/images/erweima.jpg" alt="二维码扫描">
+        <p>如果您有任何疑问或建议，请随时联系我们。</p>
+        <form class="flex flex-col gap-4">
+            <input type="text" placeholder="姓名" required>
+            <input type="email" placeholder="邮箱" required>
+            <textarea placeholder="留言" rows="4" required></textarea>
+            <button class="bg-[#8b4513] text-white py-2 px-4 rounded hover:bg-[#65320c]">提交</button>
+        </form>
+    </section>
+    <footer class="bg-[#8b4513] text-white text-center py-4">
+        <p>&copy; 2025 黔天臻宝阁. 保留所有权利.</p>
     </footer>
 </body>
-</html>
+</html> 
